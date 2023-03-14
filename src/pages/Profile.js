@@ -26,16 +26,18 @@ class Profile extends React.Component {
       <section>
         <div data-testid="page-profile">
           <Header />
-          {isLoading && <Loading />}
-          <h3>{information.name}</h3>
-          <p>{information.email}</p>
-          <span>{information.description}</span>
-          <img
-            data-testid="profile-image"
-            src={ information.image }
-            alt={ information.name }
-          />
-          <Link to="/profile/edit">Editar perfil</Link>
+          {isLoading ? <Loading /> : (
+            <section>
+              <h3>{information.name}</h3>
+              <p>{information.email}</p>
+              <span>{information.description}</span>
+              <img
+                data-testid="profile-image"
+                src={ information.image }
+                alt={ information.name }
+              />
+              <Link to="/profile/edit">Editar perfil</Link>
+            </section>)}
         </div>
       </section>
     );
