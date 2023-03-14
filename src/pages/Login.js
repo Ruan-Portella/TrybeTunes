@@ -34,7 +34,7 @@ class Login extends React.Component {
   render() {
     const { InputName, DisableButton, isLoading, OutroEstado } = this.state;
     return (
-      <section>
+      <div data-testid="page-login">
         {
           !isLoading
             ? <Loading /> : (
@@ -59,7 +59,7 @@ class Login extends React.Component {
         {
           OutroEstado && <Redirect to="/search" />
         }
-      </section>
+      </div>
     );
   }
 }
