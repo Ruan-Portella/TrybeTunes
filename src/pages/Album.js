@@ -25,6 +25,10 @@ class Album extends React.Component {
     });
   }
 
+  Remove = () => {
+
+  };
+
   render() {
     const { Musics, Name, Collection } = this.state;
     return (
@@ -38,6 +42,7 @@ class Album extends React.Component {
             trackName={ music.trackName }
             previewUrl={ music.previewUrl }
             trackId={ music.trackId }
+            Remove={ () => this.Remove() }
           />))}
       </div>
     );
