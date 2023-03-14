@@ -22,19 +22,20 @@ class Profile extends React.Component {
 
   render() {
     const { isLoading, information } = this.state;
+    const { name, email, description, image } = information;
     return (
       <section>
         <div data-testid="page-profile">
           <Header />
           {isLoading ? <Loading /> : (
             <section>
-              <h3>{information.name}</h3>
-              <p>{information.email}</p>
-              <span>{information.description}</span>
+              <h3>{name}</h3>
+              <p>{email}</p>
+              <span>{description}</span>
               <img
                 data-testid="profile-image"
-                src={ information.image }
-                alt={ information.name }
+                src={ image }
+                alt={ name }
               />
               <Link to="/profile/edit">Editar perfil</Link>
             </section>)}
