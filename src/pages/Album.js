@@ -10,35 +10,34 @@ class Album extends React.Component {
 
     this.state = {
       Musics: [],
-      Name: '',
-      Collection: '',
+      album: [],
     };
   }
 
-  async componentDidMount() {
-    const { match: { params: { id } } } = this.props;
-    const response = await getMusics(id);
-    const response2 = response.slice(1, response.length);
-    this.setState({ Musics: response2,
-      Name: response[0].artistName,
-      Collection: response[0].collectionName,
-    });
+  componentDidMount() {
+    this.AlbumData();
   }
 
+  AlbumData = async () => {
+    const { match: { params: { id } } } = this.props;
+    const response = await getMusics(id);
+    const response2 = response.slice(1);
+    this.setState({
+      Musics: response2,
+      album: response[0],
+
+    });
+  };
+
   render() {
-    const { Musics, Name, Collection } = this.state;
+    const { Musics, album } = this.state;
     return (
       <div data-testid="page-album">
         <Header />
-        <h2 data-testid="artist-name">{Name}</h2>
-        <p data-testid="album-name">{Collection}</p>
-        {Musics.map((music) => (
-          <MusicCard
-            key={ music.trackName }
-            TrackName={ music.trackName }
-            previewURL={ music.previewUrl }
-            TrackID={ music.trackId }
-          />))}
+        <MusicCard
+          Musics={ Musics }
+          album={ album }
+        />
       </div>
     );
   }
