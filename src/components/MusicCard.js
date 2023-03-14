@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
@@ -14,35 +14,36 @@ class MusicCard extends React.Component {
   }
 
   async componentDidMount() {
-    const { TrackName } = this.props;
+    const { trackName } = this.props;
     const favorite = await getFavoriteSongs();
-    if (favorite.some((song) => song.trackName === TrackName)) {
-      this.setState({
-        checked: true,
-        isLoading: false,
-      });
-    } else {
-      this.setState({ isLoading: false });
-    }
+    this.setState({
+      checked: favorite.some((song) => song.trackName === trackName),
+      isLoading: false,
+    });
   }
 
   FavoriteSong = async ({ target }) => {
-    const { TrackName, previewURL, TrackID } = this.props;
+    const { checked } = this.state;
+    const { trackName, previewURL, TrackID } = this.props;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({ isLoading: true, checked: value });
-    await addSong({ TrackID, TrackName, previewURL });
+    if (!checked) {
+      await addSong({ TrackID, trackName, previewURL });
+    } else {
+      await removeSong({ TrackID, trackName, previewURL });
+    }
     this.setState({ isLoading: false });
   };
 
   render() {
     const { isLoading, checked } = this.state;
-    const { previewURL, TrackName, TrackID } = this.props;
+    const { previewURL, trackName, TrackID } = this.props;
     return (
       <section>
         {
           isLoading ? <Loading /> : (
             <section>
-              <h3>{ TrackName }</h3>
+              <h3>{ trackName }</h3>
               <audio data-testid="audio-component" src={ previewURL } controls>
                 <track kind="captions" />
                 O seu navegador não suporta o elemento
@@ -69,7 +70,7 @@ class MusicCard extends React.Component {
 
 MusicCard.propTypes = {
   previewURL: PropTypes.string.isRequired,
-  TrackName: PropTypes.string.isRequired,
+  trackName: PropTypes.string.isRequired,
   TrackID: PropTypes.number.isRequired,
 };
 
