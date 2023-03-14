@@ -32,7 +32,7 @@ class Header extends React.Component {
         </nav>
         <div data-testid="header-user-name">
           {
-            isLoading ? <Loading /> : names
+            isLoading ? <Loading /> : <h1>{names}</h1>
           }
         </div>
       </header>
