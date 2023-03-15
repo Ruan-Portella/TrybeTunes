@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
-// import Loading from './Loading';
+import '../style/Header.css'
 
 class Header extends React.Component {
   constructor() {
@@ -24,17 +24,20 @@ class Header extends React.Component {
     this.getUserPromisse();
     const { names, isLoading } = this.state;
     return (
-      <header data-testid="header-component">
-        <nav>
-          <Link to="/search" data-testid="link-to-search">Search</Link>
-          <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-          <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+      <header data-testid="header-component" className='HeaderContent'>
+        <section className='HeaderMain'>
+        <img src={'https://i.imgur.com/UnkuC4Y.png'} className='imageHeader' alt='logo' />
+        <nav className='NavHeader'>
+          <Link to="/search" data-testid="link-to-search" className='LinkHeader'>Search</Link>
+          <Link to="/favorites" data-testid="link-to-favorites" className='LinkHeader'>Favorites</Link>
+          <Link to="/profile" data-testid="link-to-profile" className='LinkHeader'>Profile</Link>
         </nav>
-        <div data-testid="header-user-name">
+        <div data-testid="header-user-name" className='NameHeader'>
           {
             isLoading ? <Loading /> : <h1>{names}</h1>
           }
         </div>
+        </section>
       </header>
     );
   }

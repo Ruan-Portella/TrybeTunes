@@ -1,0 +1,54 @@
+.HeaderContent {
+    display: inline-block;
+    flex-direction: column;
+    width: 250px;
+    height: 900px;
+    background-color: white;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+
+}
+
+
+.NavHeader {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 60vh;
+    text-align: center;
+    gap: 50px;
+    justify-content: center;
+
+}
+
+.imageHeader {
+    width: 170px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 20%;
+}
+
+.NameHeader {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 35%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: #444955;
+}
+
+.LinkHeader {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   text-transform: capitalize;
+   text-decoration: none;
+   color: #444955;
+}

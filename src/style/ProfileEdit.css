@@ -1,0 +1,117 @@
+.ProfileEditContent {
+    position: fixed;
+    left: 250px;
+    top: 0px;
+    width: 1431px;
+    height: 250px;
+    background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+}
+
+.FormProfileContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 330px;
+    gap: 30px;
+    margin-left: 200px;
+}
+
+.NameForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 288px;
+    height: 37px;
+    background: #F0F2F5;
+    border-radius: 2%;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+
+.EmailForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputEmail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 288px;
+    height: 37px;
+    background: #F0F2F5;
+    border-radius: 2%;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+
+.DescriptionForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputDescription{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 288px;
+    height: 80px;
+    background: #F0F2F5;
+    border-radius: 2%;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+
+.ImagemForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputImagem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 288px;
+    height: 30px;
+    background: #F0F2F5;
+    border-radius: 2%;
+    border: 1px solid blue;
+    text-align: center;
+
+}
+
+.FotoButton {
+    display: flex;
+    width: 600px;
+    margin-right: 410px;
+}
+
+.ButtonForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.InputButton{
+    margin-left: 130px;
+    width: 152px;
+    height: 40px;
+    background: #003BE5;
+    border-radius: 100px;
+    border-style: none;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.InputButton:hover{
+    cursor: pointer;
+}

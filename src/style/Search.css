@@ -1,0 +1,94 @@
+.SearchContent {
+    position: fixed;
+    left: 250px;
+    top: 0px;
+    width: 1431px;
+    height: 250px;
+    background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+}
+
+.NameAlbumSearch{
+    color: #3D495C;
+    font-size: 12;
+    line-height: 150%;
+    font-weight: 700px;
+    font-style: normal;
+}
+
+.SearchMain {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 7%;
+}
+
+.SearchInput {
+    width: 400px;
+    height: 40px;
+    background: rgba(235, 255, 255, 0.5);
+    border-style: none;
+    border-radius: 23px;
+    text-align: center;
+    font-style: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.SearchButton {
+    width: 114px;
+    height: 40px;
+    border-radius: 23px;
+    border-style: none;
+    background: #00D5E2;
+    margin-left: 10px;
+    font-style: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.SearchedAlbum {
+    display: flex;
+    margin-top: 20%;
+    margin-left: 10%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.AlbumName {
+    display: flex;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #003BE5;
+}
+
+.AlbumContent {
+    margin-left: 3%;
+}
+
+.LiAlgumContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 50px;
+}
+
+.ImageAlbum {
+    width: 200px;
+}
+
+.LiContent {
+    width: 200px;
+    margin: 10px;
+}

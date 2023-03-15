@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import '../style/ProfileEdit.css'
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -80,9 +81,19 @@ class ProfileEdit extends React.Component {
         {isLoading ? <Loading /> : (
           <div data-testid="page-profile-edit">
             <form>
+            <img
+               className='ImagemProfile'
+                data-testid="profile-image"
+                src={ Imagem }
+                alt={ Name }
+              />
+            <section className='ProfileEditContent'>
+              <section className='FormProfileContent'>
+                <section className='NameForm'>
               <label>
                 Nome:
                 <input
+                  className='InputName'
                   name="Name"
                   id="profile-edit-input-name"
                   type="text"
@@ -91,9 +102,12 @@ class ProfileEdit extends React.Component {
                   data-testid="edit-input-name"
                 />
               </label>
+              </section>
+                <section className='EmailForm'>
               <label>
                 Email:
                 <input
+                className='InputEmail'
                   name="Email"
                   id="profile-edit-input-email"
                   type="text"
@@ -102,9 +116,13 @@ class ProfileEdit extends React.Component {
                   data-testid="edit-input-email"
                 />
               </label>
+              </section>
+                <section className='DescriptionForm'>
               <label>
                 Descrição:
                 <textarea
+                  maxLength='60'
+                  className='InputDescription'
                   name="Description"
                   id="profile-edit-input-description"
                   type="text"
@@ -113,9 +131,13 @@ class ProfileEdit extends React.Component {
                   data-testid="edit-input-description"
                 />
               </label>
+              </section>
+            <section className='FotoButton'>
+              <section className='ImagemForm'>
               <label>
                 Foto:
                 <input
+                  className='InputImagem'
                   name="Imagem"
                   id="profile-edit-input-image"
                   type="text"
@@ -124,15 +146,22 @@ class ProfileEdit extends React.Component {
                   data-testid="edit-input-image"
                 />
               </label>
+              </section>
+              <section className='ButtonForm'>
               <button
+                className='InputButton'
                 disabled={ ButtonDisable }
                 data-testid="edit-button-save"
                 type="submit"
                 onClick={ this.handleSubmit }
               >
-                Editar perfil
+                Salvar
 
               </button>
+              </section>
+              </section>
+              </section>
+              </section>
             </form>
           </div>)}
       </section>

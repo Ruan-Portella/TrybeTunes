@@ -1,0 +1,30 @@
+.MusicCardContent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px;
+}
+
+h3 {
+    display: flex;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:before {
+    content: "\2764";
+    color: gray;
+    font-size: 30px;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    color: #f00;
+  }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
-import Loading from '../components/Loading';
+import LoadingLogin from '../components/LoadingLogin';
+import '../style/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -37,24 +38,31 @@ class Login extends React.Component {
       <div data-testid="page-login">
         {
           !isLoading
-            ? <Loading /> : (
-              <section>
+            ? <LoadingLogin /> : (
+           <section className='Login'>  
+            <section className='LoginContentMain'>
+              <img src={'https://i.imgur.com/UnkuC4Y.png'} className='imageLogin' alt='logo' />
+              <section className='LoginContent'>
                 <input
                   type="text"
                   name="InputName"
                   data-testid="login-name-input"
                   value={ InputName }
                   onChange={ this.handleChange }
+                  className='TextLogin'
                 />
                 <button
                   type="button"
                   data-testid="login-submit-button"
                   disabled={ DisableButton }
                   onClick={ this.RedirectSearch }
+                  className="ButtonLogin"
                 >
                   Entrar
                 </button>
-              </section>)
+                </section>
+              </section>
+              </section> )
         }
         {
           OutroEstado && <Redirect to="/search" />

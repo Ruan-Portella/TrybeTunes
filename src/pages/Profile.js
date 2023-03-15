@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import Loading from '../components/Loading';
+import LoadingLogin from '../components/LoadingLogin';
 import { getUser } from '../services/userAPI';
-
+import '../style/Profile.css'
 class Profile extends React.Component {
   constructor() {
     super();
@@ -25,21 +25,35 @@ class Profile extends React.Component {
     const { name, email, description, image } = information;
     return (
       <section>
-        <div data-testid="page-profile">
+        <section data-testid="page-profile">
+        </section>
           <Header />
-          {isLoading ? <Loading /> : (
+          {isLoading ? <LoadingLogin /> : (
             <section>
-              <h3>{name}</h3>
-              <p>{email}</p>
-              <span>{description}</span>
               <img
+               className='ImagemProfile'
                 data-testid="profile-image"
                 src={ image }
                 alt={ name }
               />
-              <Link to="/profile/edit">Editar perfil</Link>
+              <section className='SearchContent'>
+              <section className='FormProfile'>
+              <label>
+                Nome:
+              <p>{name}</p>
+              </label>
+              <label>
+                E-mail:
+              <p>{email}</p>
+              </label>
+              <label>
+                Descrição:  
+              <p>{description}</p>
+              </label>
+              <Link className='LinkButton' to="/profile/edit">Editar perfil</Link>
+            </section>
+            </section>
             </section>)}
-        </div>
       </section>
     );
   }

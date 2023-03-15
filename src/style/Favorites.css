@@ -1,0 +1,38 @@
+.FavoriteContent {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 1431px;
+    height: 250px;
+    background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+    justify-content: center;
+}
+
+.FavoriteMain {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20%;
+    margin-left: 9%;
+}
+
+.FavoritesLiContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    width: 960px;
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    color: white;
+    align-items: center;
+}

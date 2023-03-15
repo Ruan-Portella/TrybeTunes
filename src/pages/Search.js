@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import Loading from '../components/Loading';
+import LoadingLogin from '../components/LoadingLogin';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../style/Search.css'
 
 class Search extends React.Component {
   constructor() {
@@ -36,7 +37,7 @@ class Search extends React.Component {
     const response = await searchAlbumsAPI(namemusic);
     this.setState({ InputName: '', isLoading: true, album: true, albumName: response });
     if (response.length === 0) {
-      this.setState({ array: true });
+      this.setState({ array: true, album: false });
     } else {
       this.setState({ array: false });
     }
@@ -47,21 +48,25 @@ class Search extends React.Component {
       InputNameSearched, albumName, array } = this.state;
     return (
       <section>
-        <Header />
-        <p data-testid="page-search" />
+         <Header />
+        <section data-testid="page-search" className='SearchContent'>
         {
           !isLoading
-            ? <Loading /> : (
+            ? <LoadingLogin /> : (
+            <section className='SearchMain'>
               <label>
                 <input
                   data-testid="search-artist-input"
                   type="text"
                   name="InputName"
+                  className='SearchInput'
                   value={ InputName }
+                  placeholder='Digite a Sua Pesquisa'
                   onChange={ this.handleChange }
                 />
                 <button
                   type="button"
+                  className='SearchButton'
                   data-testid="search-artist-button"
                   disabled={ DisableButton }
                   onClick={ this.SearchAlbum }
@@ -70,30 +75,47 @@ class Search extends React.Component {
 
                 </button>
               </label>
+              </section>
             )
         }
+        </section>
+        <section className='SearchedAlbum'>
         {
           album && (
-            <p>{`Resultado de álbuns de: ${InputNameSearched}`}</p>)
+            <section className='AlbumName'>
+            <p>{`Resultado de álbuns de: ${InputNameSearched}`}</p>
+            </section>)
         }
         {
-          array && (<p>Nenhum álbum foi encontrado</p>)
+          
+          array && (
+          <section className='AlbumName'>
+            <p>Nenhum álbum foi encontrado</p>
+          </section>)
         }
         {
         }
+        <section className='AlbumContent'>
         <ul>
+          <section className='LiAlgumContent'>
           {albumName.map((albuns) => (
+            <section className='LiContent'>
             <li key={ albuns.collectionId }>
               <Link
                 data-testid={ `link-to-album-${albuns.collectionId}` }
                 to={ `/album/${albuns.collectionId}` }
               >
-                {albuns.collectionName}
-
+                <img className='ImageAlbum'src={albuns.artworkUrl100} alt={albuns.collectionName}></img>
               </Link>
+              <p className='NameAlbumSearch'>{albuns.collectionName}</p>
+              <p>{albuns.artistName}</p>
             </li>
+            </section>
           ))}
+          </section>
         </ul>
+        </section>
+        </section>
       </section>
     );
   }
