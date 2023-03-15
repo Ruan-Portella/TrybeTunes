@@ -83,7 +83,7 @@ class Search extends React.Component {
         {
           album && (
             <section className='AlbumName'>
-            <p>{`Resultado de álbuns de: ${InputNameSearched}`}</p>
+            <p>{`Resultado de álbuns de: ${InputNameSearched.toUpperCase()}`}</p>
             </section>)
         }
         {
