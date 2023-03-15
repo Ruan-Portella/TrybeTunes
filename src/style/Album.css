@@ -1,51 +1,97 @@
-.AlbumArtistContent {
-    position: absolute;
-    left: 250px;
-    top: 0px;
-    width: 1431px;
-    height: 250px;
-    background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
-    justify-content: center;
-}
+@media only screen and (max-width: 768px) { 
 
-.AlbumArtist {
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-    margin-right: 350px;
-}
-
-img {
-    width: 200px;
-}
-
-.NameAlbum{
-    color: white;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 400;
-}
-
-.CollectionAlbum{
-    color: white;
-    font-size: 20px;
-    line-height: 150%;
-    font-weight: 700;
     
+    .AlbumArtist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    
+    
+    .NameAlbum{
+        color: black;
+        display: flex;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 700;
+        justify-content: center;
+    }
+    
+    .CollectionAlbum{
+        color: black;
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: 700;
+        
+    }
+
+    
+    .AlbumNameContent {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
 }
 
-.AlbumNameContent {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 110px;
-    margin-left: 30px;
-}
-
-.Album {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+@media only screen and (min-width: 770px) { 
+    .AlbumArtistContent {
+        position: absolute;
+        left: 250px;
+        top: 0px;
+        width: 1431px;
+        height: 250px;
+        background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+        justify-content: center;
+    }
+    
+    .AlbumArtist {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-right: 350px;
+    }
+    
+    img {
+        width: 200px;
+    }
+    
+    .NameAlbum{
+        color: white;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+    }
+    
+    .CollectionAlbum{
+        color: white;
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: 700;
+        
+    }
+    
+    .AlbumNameContent {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 110px;
+        margin-left: 30px;
+    }
+    
+    .Album {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
 }

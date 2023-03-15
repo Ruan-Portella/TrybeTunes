@@ -32,7 +32,7 @@ class Header extends React.Component {
           <Link to="/favorites" data-testid="link-to-favorites" className='LinkHeader'>Favorites</Link>
           <Link to="/profile" data-testid="link-to-profile" className='LinkHeader'>Profile</Link>
         </nav>
-        <div data-testid="header-user-name" className='NameHeader'>
+        <div data-testid="header-user-name" className='NameHeaderContent'>
           {
             isLoading ? <Loading /> : <h1>{`Olá, ${names}`}</h1>
           }
