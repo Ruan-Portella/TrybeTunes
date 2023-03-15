@@ -38,15 +38,15 @@ class Profile extends React.Component {
               />
               <section className='ProfilexContent'>
               <section className='FormProfile'>
-              <label>
+              <label className='NameProfileContent'>
                 Nome:
               <p>{name}</p>
               </label>
-              <label>
+              <label className='EmailProfileContent'>
                 E-mail:
               <p>{email}</p>
               </label>
-              <label>
+              <label className='DescriptionProfileContent'>
                 Descrição:  
               <p>{description}</p>
               </label>

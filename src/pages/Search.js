@@ -108,7 +108,7 @@ class Search extends React.Component {
                 <img className='ImageAlbum'src={albuns.artworkUrl100} alt={albuns.collectionName}></img>
               </Link>
               <p className='NameAlbumSearch'>{albuns.collectionName}</p>
-              <p>{albuns.artistName}</p>
+              <p className='NameAlbumSearch'>{albuns.artistName}</p>
             </li>
             </section>
           ))}

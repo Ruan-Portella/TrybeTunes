@@ -17,7 +17,7 @@
     
     
     .NameAlbum{
-        color: black;
+        color: white;
         display: flex;
         font-style: normal;
         font-size: 14px;
@@ -27,7 +27,7 @@
     }
     
     .CollectionAlbum{
-        color: black;
+        color: white;
         font-size: 20px;
         line-height: 150%;
         font-weight: 700;

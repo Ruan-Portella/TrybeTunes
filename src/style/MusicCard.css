@@ -11,6 +11,7 @@ h3 {
     text-align: center;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 
@@ -21,7 +22,7 @@ input[type="checkbox"] {
   
   input[type="checkbox"]:before {
     content: "\2764";
-    color: gray;
+    color: white;
     font-size: 30px;
   }
   
