@@ -1,4 +1,24 @@
-    .c-loader {
+  
+@media only screen and (max-width: 768px) {  
+  
+  .c-loader {
+    animation: is-rotating 1s infinite;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 50px;
+    width: 50px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .c-loader {
     animation: is-rotating 1s infinite;
     border: 6px solid #e5e5e5;
     border-radius: 50%;
@@ -12,3 +32,4 @@
       transform: rotate(1turn);
     }
   }
+}

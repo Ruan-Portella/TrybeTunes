@@ -1,46 +1,43 @@
-.HeaderContent {
-    display: inline-block;
-    flex-direction: column;
-    width: 250px;
-    height: 900px;
-    background-color: white;
-    justify-content: space-between;
-    position: fixed;
-    top: 0px;
-
-}
+@media only screen and (max-width: 768px) { 
 
 
-.NavHeader {
+ .NavHeader {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0 auto;
-    min-height: 60vh;
     text-align: center;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
 
 }
+
 
 .imageHeader {
-    width: 170px;
+    width: 200px;
     margin: 0 auto;
-    display: flex;
-    margin-top: 20%;
+    margin-bottom: 10px;
 }
 
-.NameHeader {
-    margin: 0 auto;
+.HeaderContentMain {
     display: flex;
-    justify-content: center;
-    margin-top: 35%;
-    font-weight: 400;
-    font-size: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.NameHeader {
+    font-weight: 700;
+    font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: capitalize;
+    text-decoration: none;
     color: #444955;
+    margin: 0 auto;
 }
+
+
 
 .LinkHeader {
    font-style: normal;
@@ -51,4 +48,64 @@
    text-transform: capitalize;
    text-decoration: none;
    color: #444955;
+}
+
+}
+
+@media only screen and (min-width: 770px) { 
+
+    .HeaderContent {
+        display: inline-block;
+        flex-direction: column;
+        width: 250px;
+        height: 900px;
+        background-color: white;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+    
+    }
+    
+    
+    .NavHeader {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        min-height: 60vh;
+        text-align: center;
+        gap: 50px;
+        justify-content: center;
+    
+    }
+    
+    .imageHeader {
+        width: 170px;
+        margin: 0 auto;
+        display: flex;
+        margin-top: 20%;
+    }
+    
+    .NameHeader {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 35%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: #444955;
+    }
+    
+    .LinkHeader {
+       font-style: normal;
+       font-weight: 700;
+       font-size: 16px;
+       line-height: 16px;
+       letter-spacing: 0.03em;
+       text-transform: capitalize;
+       text-decoration: none;
+       color: #444955;
+    }
 }

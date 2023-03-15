@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import PropyTypes from 'prop-types';
 import Header from '../components/Header';
-import Loading from '../components/Loading';
+import LoadingLogin from '../components/LoadingLogin';
 import { getUser, updateUser } from '../services/userAPI';
 import '../style/ProfileEdit.css'
 
@@ -78,7 +78,7 @@ class ProfileEdit extends React.Component {
     return (
       <section>
         <Header />
-        {isLoading ? <Loading /> : (
+        {isLoading ? <LoadingLogin /> : (
           <div data-testid="page-profile-edit">
             <form>
             <img

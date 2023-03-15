@@ -25,7 +25,7 @@ class Header extends React.Component {
     const { names, isLoading } = this.state;
     return (
       <header data-testid="header-component" className='HeaderContent'>
-        <section className='HeaderMain'>
+        <section className='HeaderContentMain'>
         <img src={'https://i.imgur.com/UnkuC4Y.png'} className='imageHeader' alt='logo' />
         <nav className='NavHeader'>
           <Link to="/search" data-testid="link-to-search" className='LinkHeader'>Search</Link>
@@ -34,7 +34,7 @@ class Header extends React.Component {
         </nav>
         <div data-testid="header-user-name" className='NameHeader'>
           {
-            isLoading ? <Loading /> : <h1>{names}</h1>
+            isLoading ? <Loading /> : <h1>{`Olá, ${names}`}</h1>
           }
         </div>
         </section>

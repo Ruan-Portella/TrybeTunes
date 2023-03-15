@@ -36,7 +36,7 @@ class Profile extends React.Component {
                 src={ image }
                 alt={ name }
               />
-              <section className='SearchContent'>
+              <section className='ProfilexContent'>
               <section className='FormProfile'>
               <label>
                 Nome:

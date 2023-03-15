@@ -1,4 +1,32 @@
+@media only screen and (max-width: 768px) {  
+
 .LoadingLoginContent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    transform: scale(2);
+  }
+  
+  .c-Loginloader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 10px;
+    width: 10px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@media only screen and (min-width: 770px) {  
+
+  .LoadingLoginContent {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -20,3 +48,4 @@
       transform: rotate(1turn);
     }
   }
+}
