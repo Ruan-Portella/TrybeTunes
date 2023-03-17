@@ -35,7 +35,7 @@ class Login extends React.Component {
   render() {
     const { InputName, DisableButton, isLoading, OutroEstado } = this.state;
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className='LoginImage'>
         {
           !isLoading
             ? <LoadingLogin /> : (

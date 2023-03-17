@@ -24,8 +24,9 @@ class Header extends React.Component {
     this.getUserPromisse();
     const { names, isLoading } = this.state;
     return (
-      <header data-testid="header-component" className='HeaderContent'>
-        <section className='HeaderContentMain'>
+    <section>
+      <header data-testid="header-component" className='HeaderContentMain'>
+        <section className='HeaderContentLinks'>
         <img src={'https://i.imgur.com/UnkuC4Y.png'} className='imageHeader' alt='logo' />
         <nav className='NavHeader'>
           <Link to="/search" data-testid="link-to-search" className='LinkHeader'>Search</Link>
@@ -34,11 +35,12 @@ class Header extends React.Component {
         </nav>
         <div data-testid="header-user-name" className='NameHeaderContent'>
           {
-            isLoading ? <Loading /> : <h1>{`Olá, ${names}`}</h1>
+            isLoading ? <Loading /> : <h1>{`Olá, ${names.toUpperCase()}`}</h1>
           }
         </div>
         </section>
       </header>
+      </section>
     );
   }
 }

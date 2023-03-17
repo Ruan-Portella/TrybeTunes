@@ -1,4 +1,26 @@
+@media only screen and (max-width: 768px) { 
+
 .MusicCardContent {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px;
+}
+
+h3 {
+    display: flex;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+}
+
+@media only screen and (min-width: 770px) { 
+
+  .MusicCardContent {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -18,6 +40,7 @@ h3 {
 input[type="checkbox"] {
     appearance: none;
     cursor: pointer;
+    color: #f00;
   }
   
   input[type="checkbox"]:before {
@@ -29,3 +52,4 @@ input[type="checkbox"] {
   input[type="checkbox"]:checked::before {
     color: #f00;
   }
+}

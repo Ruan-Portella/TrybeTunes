@@ -47,13 +47,14 @@ class Search extends React.Component {
     const { InputName, DisableButton, isLoading, album,
       InputNameSearched, albumName, array } = this.state;
     return (
-      <section>
-         <Header />
-        <section data-testid="page-search" className='SearchContent'>
-        {
-          !isLoading
-            ? <LoadingLogin /> : (
-            <section className='SearchMain'>
+      
+    <section className='SearchImage'>
+      <section className='HeaderSearchMain'>
+      <Header />
+    <section className='AGORA'>
+      <section className='TODOS'>
+        <section data-testid="page-search" className='SearchContentMainALbum'>
+            <section className='SearchMainAlbumContent'>
               <label>
                 <input
                   data-testid="search-artist-input"
@@ -76,9 +77,11 @@ class Search extends React.Component {
                 </button>
               </label>
               </section>
-            )
-        }
         </section>
+        </section>
+        {
+        !isLoading ? <LoadingLogin /> : (
+       <>
         <section className='SearchedAlbum'>
         {
           album && (
@@ -107,8 +110,10 @@ class Search extends React.Component {
               >
                 <img className='ImageAlbum'src={albuns.artworkUrl100} alt={albuns.collectionName}></img>
               </Link>
+              <section className='AlbumSearchContentMain'>
               <p className='NameAlbumSearch'>{albuns.collectionName}</p>
               <p className='NameAlbumSearch'>{albuns.artistName}</p>
+              </section>
             </li>
             </section>
           ))}
@@ -116,6 +121,10 @@ class Search extends React.Component {
         </ul>
         </section>
         </section>
+        </>    )
+      }
+        </section>
+      </section>
       </section>
     );
   }
