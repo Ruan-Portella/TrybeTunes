@@ -72,36 +72,55 @@
 @media only screen and (min-width: 770px) {
 
     .ProfilexContent {
-        position: fixed;
-        left: 250px;
-        top: 0px;
-        width: 1431px;
-        height: 250px;
-        background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+        height: 220px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 23vh;
     }
     
     .FormProfile {
         display: flex;
-        margin-top: 350px;
-        margin-left: 700px;
         gap: 16px;
         flex-direction: column;
     }
+
+    .teste {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    }
     
-    
+    .FormProfileTest {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .ImagemAlbumContent {
+        justify-content: flex-end;
+        display: flex;
+
+    }
+
+    .ImagemALbumContentContent {
+        width: 80%;
+    }
+
     .ImagemProfile{
-        margin-top: 280px;
-        margin-left: 550px;
-        width: 350px;
-        border-radius: 3%;
-        display: inline-block;
-        position: absolute;
+        border-radius: 50%;
+        width: 230px;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
     }
     
     .LinkButton {
-        margin-top: 2%;
-        width: 152px;
-        height: 40px;
+        padding: 10px 25px;
+        margin: 0 auto;
         background-color: #003BE5;
         border-radius: 100px;
         text-align: center;

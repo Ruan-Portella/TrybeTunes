@@ -30,14 +30,21 @@ class Profile extends React.Component {
           <Header />
           {isLoading ? <LoadingLogin /> : (
             <section>
-              <img
+             <section className='ProfilexContent'>
+            <section className='ImagemAlbumContent'>
+              <section className='ImagemALbumContentContent'>
+             <img
                className='ImagemProfile'
                 data-testid="profile-image"
                 src={ image }
                 alt={ name }
               />
-              <section className='ProfilexContent'>
+              </section>
+             </section>
+             </section>
+              <section className='teste'>
               <section className='FormProfile'>
+              <section className='FormProfileTest'>
               <label className='NameProfileContent'>
                 Nome:
               <p>{name}</p>
@@ -51,6 +58,7 @@ class Profile extends React.Component {
               <p>{description}</p>
               </label>
               <Link className='LinkButton' to="/profile/edit">Editar perfil</Link>
+            </section>
             </section>
             </section>
             </section>)}

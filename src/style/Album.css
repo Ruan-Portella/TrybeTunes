@@ -8,10 +8,13 @@
         align-items: center;
         text-align: center;
         margin-top: 10px;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
     }
 
-    img {
+    .ImagemAlbum {
         width: 150px;
+        border: 1px solid white;
+        margin-bottom: 10px;
     }
 
     
@@ -38,30 +41,37 @@
     .AlbumNameContent {
         display: flex;
         flex-direction: column-reverse;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black;
+        margin-bottom: 10px;
     }
 
 }
 
 @media only screen and (min-width: 770px) { 
     .AlbumArtistContent {
-        position: absolute;
-        left: 250px;
-        top: 0px;
-        width: 1431px;
-        height: 250px;
-        background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+        height: 220px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 100%);
         justify-content: center;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
     
     .AlbumArtist {
         display: flex;
         justify-content: center;
-        margin-top: 150px;
-        margin-right: 350px;
+        align-items: center;
+        margin-left: 25vh;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
     }
     
-    img {
+    .ImagemAlbum {
         width: 200px;
+        margin-top: 10vh;
+        border-radius: 20px;
+        border: 1px solid white;
     }
     
     .NameAlbum{
@@ -83,7 +93,6 @@
     .AlbumNameContent {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 110px;
         margin-left: 30px;
     }
     
@@ -93,5 +102,6 @@
         justify-content: center;
         text-align: center;
         align-items: center;
+        margin-left: 30vh;
     }
 }

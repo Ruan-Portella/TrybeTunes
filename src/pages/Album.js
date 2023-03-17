@@ -39,7 +39,7 @@ class Album extends React.Component {
         <Header />
         <section className='AlbumArtistContent'>
         <section className='AlbumArtist'>
-        <img src={Image} alt={Name}></img>
+        <img className='ImagemAlbum' src={Image} alt={Name}></img>
         <section className='AlbumNameContent'>
         <span className='NameAlbum' data-testid="artist-name">{Name}</span>
         <span className='CollectionAlbum' data-testid="album-name">{Collection}</span>
