@@ -103,7 +103,7 @@ class Search extends React.Component {
           <section className='LiAlgumContent'>
           {albumName.map((albuns) => (
             <section className='LiContent'>
-            <li key={ albuns.collectionId }>
+            <li key={ albuns.collectionId }  className='ALbumLi'>
               <Link
                 data-testid={ `link-to-album-${albuns.collectionId}` }
                 to={ `/album/${albuns.collectionId}` }

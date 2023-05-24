@@ -14,7 +14,7 @@ class ProfileEdit extends React.Component {
       Name: '',
       Email: '',
       Description: '',
-      Imagem: '',
+      Imagem: 'https://i.imgur.com/GdqTEm4.png',
       isLoading: false,
       ButtonDisable: true,
     };
@@ -26,11 +26,22 @@ class ProfileEdit extends React.Component {
 
     this.setState({
       Name: response.name,
-      Email: response.email,
-      Description: response.description,
-      Imagem: response.image,
+      Email:  `${response.name}@gmail.com`,
+      Description: `Welcome, ${response.name}!`,
       isLoading: false,
       ButtonDisable: false });
+
+      if (response.image.length > 1) {
+        this.setState({ Imagem: response.image})
+      }
+  
+      if (response.email.length > 1) {
+        this.setState({Email: response.email})
+      }
+  
+      if (response.description.length > 1) {
+        this.setState({Description: response.description})
+      }
   }
 
   handleChange = ({ target }) => {
@@ -81,17 +92,24 @@ class ProfileEdit extends React.Component {
         {isLoading ? <LoadingLogin /> : (
           <div data-testid="page-profile-edit">
             <form>
+             <section className='ProfileEditContent'>
+            <section className='ImagemAlbumContentEdit'>
+              <section className='ImagemALbumContentContentEdit'>
             <img
-               className='ImagemProfile'
+               className='ImagemProfileEdit'
                 data-testid="profile-image"
                 src={ Imagem }
                 alt={ Name }
               />
-            <section className='ProfileEditContent'>
+              </section>
+              </section>
+              </section>
+              <section className='FormProfileContentContent'>
               <section className='FormProfileContent'>
+              <section className='FormProfileEditContent'>
                 <section className='NameForm'>
-              <label>
-                Nome:
+              <label className='NameLabel'>
+                <p>Nome:</p>
                 <input
                   className='InputName'
                   name="Name"
@@ -104,8 +122,8 @@ class ProfileEdit extends React.Component {
               </label>
               </section>
                 <section className='EmailForm'>
-              <label>
-                Email:
+              <label className='EmailLabel'>
+                <p>Email:</p>
                 <input
                 className='InputEmail'
                   name="Email"
@@ -118,8 +136,8 @@ class ProfileEdit extends React.Component {
               </label>
               </section>
                 <section className='DescriptionForm'>
-              <label>
-                Descrição:
+              <label className='DescriptionLabel'>
+                <p>Descrição:</p>
                 <textarea
                   maxLength='60'
                   className='InputDescription'
@@ -134,8 +152,8 @@ class ProfileEdit extends React.Component {
               </section>
             <section className='FotoButton'>
               <section className='ImagemForm'>
-              <label>
-                Foto:
+              <label className='FotoLabel'>
+                 <p>Foto:</p>
                 <input
                   className='InputImagem'
                   name="Imagem"
@@ -158,6 +176,7 @@ class ProfileEdit extends React.Component {
                 Salvar
 
               </button>
+              </section>
               </section>
               </section>
               </section>

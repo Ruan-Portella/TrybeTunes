@@ -94,7 +94,7 @@
         }
 
         .LoginContentMain {
-       width: 650px;
+        width: 650px;
         background-color: rgb(210, 218, 231);
         box-shadow: 0px 0px 26px rgba(68, 73, 85, 0.2);
         border-radius: 20px;
@@ -130,7 +130,6 @@
         }
 
         .ButtonLogin {
-
         padding: 10px 40px;
         background: #003BE5;
         border-style: none;
@@ -140,7 +139,6 @@
         margin-bottom: 50px;
         text-align: center;
         align-items: center;
-
         }
 
         .LoginForm {

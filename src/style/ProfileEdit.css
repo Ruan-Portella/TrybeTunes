@@ -1,9 +1,12 @@
 @media only screen and (max-width: 768px) {
 
-.ImagemProfile {
+.ImagemProfileEdit {
     width: 150px;
     margin: 0 auto;
     border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
 }
 
 .FormProfileContent {
@@ -115,28 +118,78 @@
 
 @media only screen and (min-width: 770px) { 
     .ProfileEditContent {
-        position: fixed;
-        left: 250px;
-        top: 0px;
-        width: 1431px;
-        height: 250px;
-        background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+        height: 220px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 23vh;
     }
+
     
     .FormProfileContent {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin-top: 330px;
+        align-items: flex-end;
         gap: 30px;
-        margin-left: 200px;
+        margin-top: 15vh;
+    }
+
+    .FormProfileContentContent {
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .FormProfileEditContent {
+        width: 80%;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .NameLabel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
+    }
+
+    .EmailLabel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
+    }
+
+    .DescriptionLabel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
+    }
+
+    .FotoLabel {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
     }
     
     .NameForm {
         display: flex;
         flex-direction: column;
     }
+
+
     
     .InputName {
         display: flex;
@@ -149,6 +202,24 @@
         border: 1px solid blue;
         text-align: center;
     
+    }
+
+    .ImagemAlbumContentEdit {
+        justify-content: flex-end;
+        display: flex;
+
+    }
+
+    .ImagemALbumContentContentEdit {
+        width: 80%;
+    }
+
+    .ImagemProfileEdit{
+        border-radius: 50%;
+        width: 230px;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
     }
     
     .EmailForm {
@@ -208,16 +279,17 @@
     .FotoButton {
         display: flex;
         width: 600px;
-        margin-right: 410px;
+        flex-direction: column;
+        align-items: center;
     }
     
     .ButtonForm {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
     }
     
     .InputButton{
-        margin-left: 130px;
         width: 152px;
         height: 40px;
         background: #003BE5;

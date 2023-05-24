@@ -48,21 +48,22 @@ class Favorites extends React.Component {
           />
         </li>)));
     return (
-      <section>
+    <section>
         <Header />
         <section data-testid="page-favorites">
+        <section className='FavoriteContentSave'>
+        <section  className='FavoriteContent'> </section>
+        </section>
           {
             isLoading ? <LoadingLogin /> : (
-              <section>
-                <section className='FavoriteContent'>
+              <section className='FavoriteMainContent'>
               <h2>Músicas Favoritas</h2>
-                </section>
               <section className='FavoriteMain'>
               <ul><section className='FavoritesLiContent'>{mu}</section></ul>
               </section>
               </section>)
           }
-        </section>
+      </section>
       </section>
     );
   }

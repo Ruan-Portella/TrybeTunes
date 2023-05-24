@@ -8,6 +8,19 @@
         align-items: center;
     }
 
+    .teste {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+        
+        .FormProfileTest {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
     .DescriptionProfileContent {
         display: flex;
         flex-direction: row;
@@ -22,7 +35,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         gap: 10px;
         color: white;
     }
@@ -46,6 +59,8 @@
         justify-content: center;
         align-items: center;
         color: white;
+        margin: 0 auto;
+        margin-top: 20px;
 
     }
     
@@ -61,6 +76,7 @@
         text-decoration: none;
         color: white;
         text-transform: uppercase;
+        margin: 0 auto;
     }
     
     span {
@@ -98,6 +114,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        align-items: flex-start;
     }
 
     .ImagemAlbumContent {
@@ -134,5 +151,36 @@
     
     span {
         gap: 1px;
+    }
+
+    .NameProfileContent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
+    }
+
+    .EmailProfileContent {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
+    }
+
+    .DescriptionProfileContent {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        text-shadow:  0.5px 0.5px 0px black, 2px 2px 0px black
     }
  }

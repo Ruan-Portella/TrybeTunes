@@ -3,31 +3,46 @@
 h2 {
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 5%;
     color: white;
 } 
 }
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 769px) { 
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
     .FavoriteContent {
-        position: absolute;
-        left: 250px;
-        top: 0px;
-        width: 1431px;
-        height: 250px;
-        background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+        height: 220px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 4%, rgba(0,212,255,1) 100%);
         justify-content: center;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
     
+    .FavoriteMainContent {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: 0 auto;
+    }
+
     .FavoriteMain {
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         align-content: center;
-        margin-top: 20%;
-        margin-left: 9%;
+        width: 10%;
+        margin-left: 20vh;
     }
     
     .FavoritesLiContent {
@@ -36,7 +51,6 @@ h2 {
         flex-wrap: wrap;
         list-style: none;
         justify-content: center;
-        width: 960px;
         text-align: center;
         align-items: center;
     }
@@ -44,8 +58,8 @@ h2 {
     h2 {
         display: flex;
         justify-content: center;
-        margin-top: 6%;
         color: white;
         align-items: center;
+        margin-left: 26vh;
     }
 }
