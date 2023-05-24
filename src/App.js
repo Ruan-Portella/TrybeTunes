@@ -12,16 +12,16 @@ class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="TrybeTunes/" component={ Login } />
-        <Route exact path="TrybeTunes/search" component={ Search } />
+        <Route exact path="/" component={ Login } />
+        <Route exact path="/search" component={ Search } />
         <Route
           exact
-          path="TrybeTunes/album/:id"
+          path="/album/:id"
           component={ Album }
         />
-        <Route exact path="TrybeTunes/favorites" component={ Favorites } />
-        <Route exact path="TrybeTunes/profile" component={ Profile } />
-        <Route exact path="TrybeTunes/profile/edit" component={ ProfileEdit } />
+        <Route exact path="/favorites" component={ Favorites } />
+        <Route exact path="/profile" component={ Profile } />
+        <Route exact path="/profile/edit" component={ ProfileEdit } />
         <Route exact path="*" component={ NotFound } />
 
       </Switch>
